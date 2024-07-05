@@ -1,16 +1,12 @@
-
-import io.restassured.config.HeaderConfig;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import org.hamcrest.Matchers;
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.http.Headers.headers;
 import static org.hamcrest.Matchers.equalTo;
 
 
@@ -24,6 +20,13 @@ public class VaccineAPITest {
     }
 
     //add a new vaccine and validate that the vaccine was added
+//    graphwalker test:
+    //		v_VaccineList();
+//		e_createVaccine();
+//		v_VaccineCreated();
+//		e_findVaccine();
+//		v_VaccineList();
+
     @Test
     public void testAddVaccine() {
 
@@ -69,6 +72,12 @@ public class VaccineAPITest {
     }
 
     // update a vaccine and validate that the vaccine was updated
+//    graphwalker test:
+    //		v_VaccineList();
+//		e_updateVaccine();
+//		v_VaccineUpdated();
+//		e_findVaccine();
+//		v_VaccineList();
     @Test
     public void testUpdateVaccine() {
 
@@ -104,6 +113,13 @@ public class VaccineAPITest {
     }
 
     // delete a vaccine and validate that the vaccine was deleted
+    //    graphwalker test:
+//    v_VaccineList();
+//    e_deleteVaccine();
+//    v_VaccineDeleted();
+//    e_notFindVaccine();
+//    v_VaccineList();
+
     @Test
     public void testDeleteVaccine() {
 
@@ -136,6 +152,10 @@ public class VaccineAPITest {
     }
 
     //list all vaccines and validate that the list is not empty
+    //    graphwalker test:
+//    v_VaccineList();
+//    e_listVaccines();
+//    v_VaccineList();
 
     @Test
     public void testListVaccines() {
